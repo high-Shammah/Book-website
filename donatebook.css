@@ -222,7 +222,7 @@ nav {
 /* Rectangle section with drop shadow */
 .rectangle-section {
     width: 1300px;
-    height: 250px;
+    height: 500px;
     margin: 0 auto;
     margin-top: 50px; 
     border-radius: 10px;
@@ -237,7 +237,7 @@ nav {
 /* Content inside the rectangle section */
 .content {
     text-align: center;
-    margin-top: -170px;
+    margin-top: -380px;
 }
 .content h2 {
     font-size: 24px;
