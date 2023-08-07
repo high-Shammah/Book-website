@@ -1,0 +1,1402 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #EBFBF2;
+    color: #000;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 30px; 
+    margin-right: 10px; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; 
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px; 
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1; 
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+        z-index: 2; /* Ensure the burger icon (sidebar) is on top of other content */
+    }
+
+   
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+.image-text-session {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    padding: 20px;
+    background-color: #fff;
+    padding: 70px 80px; 
+    margin-bottom: 30px;
+    flex-direction: row-reverse; /* Change the flex direction */
+}
+
+
+.text-content h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.text-content p {
+    font-size: 26px;
+    color: #777;
+}
+
+.image-container {
+    max-width: 800px;
+    flex: shrink 0; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+   width: 700px;
+    height: 500px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+.buttons {
+    display: none;
+}
+
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .image-text-session {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: -20px;
+        width: 100%;
+        max-width: 500px;
+        order: 1;
+    }
+
+    .text-content p {
+        font-size: 14px;
+        text-align: center;
+        margin-top: -30px;
+        margin-bottom: 70px;
+    }
+
+    .image-container {
+        margin-top: 5px;
+        order: 3;
+    }
+    .image-container img {
+        width: 420px;
+         height: 290px; 
+         object-fit: cover; 
+         border-radius: 10px;
+         order: 3;
+     }
+
+    
+     .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -20px;
+        margin-bottom: 30px;
+        order: 2;
+    }
+
+       .buttons .button1 {
+        display: block;
+        background-color: #2E8B57;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        width: 300px;
+        order: 2;
+    }
+
+
+     .buttons .button2 {
+        display: block;
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: default;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        width: 300px;
+        order: 2;
+    }
+
+    .break-mobile {
+        display: none;
+    }
+
+    .text-content h1 br {
+        display: none; 
+    }
+   }
+
+/* Rectangle section with drop shadow */
+.rectangle-section {
+    width: 1300px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 50px; 
+    border-radius: 10px;
+    background-color: #2E8B57;
+    box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Content inside the rectangle section */
+.content {
+    text-align: center;
+    margin-top: -170px;
+}
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.content p:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.content p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.content .buttons {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content .buttons button {
+    flex: 1; 
+    padding: 10px 20px;
+    margin: 0 250px;
+    background-color: #f1fdf6;
+    color: #2E8B57;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .rectangle-section {
+        display: none;
+}
+}
+/* 3rd section */
+
+
+.black-section {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 50px;
+    margin-top: -200px;
+}
+
+.section-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.numbered-divs-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1800px;
+    background-color: #fff;
+}
+
+.numbered-divs-section p{
+    max-width: 450px;
+}
+
+.numbered-div {
+    display: flex;
+    justify-content: center;
+    text-align: flex-start;
+    align-items: flex-start;
+    width: 45%; 
+    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.number-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2E8B57;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbered-div.div1 {
+    margin-top: 0;
+}
+
+.numbered-div.div2 {
+    margin-top: 260px;
+}
+
+.numbered-div.div3 {
+    margin-top: -40px; 
+    margin-right: 40px;
+}
+
+
+.numbered-div.div4 {
+    margin-top: 250px; 
+    margin-right: 40px;
+}
+
+.numbered-div.div5 {
+    margin-top: -40px; 
+    margin-right: 850px;
+}
+
+.numbered-div .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+}
+
+.numbered-div img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 2%;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* Animation */
+.show-animation {
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 10;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .black-section {
+        margin-top: -70px;
+    }
+
+    .black-section h2 {
+      font-size: 26px;
+    }
+    
+    .numbered-divs-section {
+      align-items: flex-start;
+      padding: 10px; 
+    }
+  
+    .numbered-div {
+      width: 90%; 
+      margin-right: 0;
+    }
+
+    .number-circle {
+        display: none;
+    }
+
+    .numbered-div img {
+        width: 300px;
+    }
+
+    .numbered-div.div1{
+        width: 300px;
+      }
+  
+    .numbered-div.div2{
+      margin-top: 40px; 
+      width: 300px;
+    }
+
+    .numbered-div.div3 {
+        margin-top: 20px;
+        width: 300px;
+      }
+
+    .numbered-div.div4 {
+        margin-top: 40px;
+        width: 300px;
+    }
+
+    .numbered-div.div5{
+        margin-top: 40px;
+        margin-left: -40px;
+        margin-right: 0;
+        width: 300px;
+    }
+
+    .number-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+      }
+    
+      .numbered-div img {
+        width: 100%; 
+        height: auto; 
+        margin-right: 0;
+      }
+    }
+
+    .picture-slider {
+        overflow: hidden; 
+      }
+      
+      .picture-container {
+        display: flex; 
+        background-color: #EBFBF2;
+        animation: slide 20s linear infinite; 
+      }
+      
+      .picture-container img {
+        width: 422px;
+        height: 196px;
+        margin-right: 20px;
+        border-radius: 7px;
+      }
+
+      .picture-container { 
+        margin-bottom: 20px;
+      }
+    
+
+.slider1 {
+    animation: slide1 10s linear infinite; 
+  }
+  
+  .slider2 {
+    animation: slide2 8s linear infinite; 
+  }
+  
+  @keyframes slide1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  @keyframes slide2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .picture-slider {
+      overflow: hidden;
+      margin-bottom: 90px;
+    }
+  
+    .picture-container {
+      display: flex;
+      flex-wrap: nowrap; 
+    }
+
+    .picture-slider img {
+        width: 190px; 
+        height: 100px; 
+        object-fit: cover; 
+      }
+  
+    .slider1 {
+      animation: slide1 10s linear infinite; /* Adjust the animation duration as needed */
+    }
+  
+    .slider2 {
+      animation: slide2 8s linear infinite; 
+    }
+  
+    /* Keyframes for sliding animation for slider 1 */
+    @keyframes slide1 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%); 
+      }
+    }
+  
+    /* Keyframes for sliding animation for slider 2 */
+    @keyframes slide2 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%); 
+      }
+    }
+  }
+
+  
+  /* Book Section */
+  .book-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #EBFBF2;
+    margin-top: -40px;
+    height: 1000px;
+  }
+  
+  .book-container {
+    position: relative;
+  }
+  
+  .book-picture {
+    width: 700px;
+    height: 600px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%); /* Applies a black and white filter */
+
+  }
+
+  .points-container-2 {
+    margin-top: -80px;
+  }
+
+  .points-container-3 {
+    margin-top: -190px;
+  }
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.book-container-2 img {
+  filter: grayscale(100%);
+  margin-top: -110px;
+  margin-left: 40px;
+}
+
+
+/* not using this for now */
+.small-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .small-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Different Positions and Shapes */
+  .circle {
+    background-color: #ff6600;
+    background-image: url('images/IMADE\ BOOK\ \(3\).jpg');
+    top: 10px; /* Adjust position as needed */
+    right: 10px;
+  }
+  
+  .rectangle {
+    background-color: #2E8B57;
+    background-image: url('images/IMAGE\ BOOK\ \(26\).jpg');
+    top: 50px; /* Adjust position as needed */
+    left: -30px; /* Adjust position as needed */
+    transform: translate(0, -50%);
+  }
+  
+  .square {
+    background-color: #ff0000;
+    background-image: url('images/IMAGE\ BOOK\ \(10\).jpg');
+    top: 80px; /* Adjust position as needed */
+    right: 50px; /* Adjust position as needed */
+    transform: translate(0, -50%);
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent; /* Adjust size as needed */
+    border-right: 40px solid transparent; /* Adjust size as needed */
+    border-bottom: 80px solid #0000ff;
+    background-image: url('images/IMAGE\ BOOK\ \(22\).jpg');
+    bottom: 60px; /* Adjust position as needed */
+    left: 30px; /* Adjust position as needed */
+    position: absolute;
+  }
+  
+  /* Animation */
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   
+  
+  .points-container{
+    max-width: 40%;
+    background-color: #EBFBF2;
+    margin-top: -120px;
+  }
+
+  .points-container-2 {
+    text-align: center;
+    background-color: #EBFBF2;
+    padding: 20px;
+    top: 20px;
+    padding-top: 20px;
+  }
+
+  .points-container-3 {
+    text-align: center;
+    background-color: #fff;
+    padding-top: 20px;
+  }
+
+  .point {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add a transition for smooth animation */
+  }
+
+  .text-content {
+    order: 1; /* Move text below the image in the mobile version */
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 190px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .book-image-2 {
+    display: none;
+  }
+
+  
+  /* Mobile responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .book-section {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: -20px;
+      height: 1000px;
+    }
+    .book-container-2 {
+      display: none;
+  
+    }
+  
+    .book-image {
+      display: none;
+    }
+  
+    .points-container {
+      flex: 0;
+      margin-top: 40px;
+      margin-left: 20px;
+      max-width: 80%;
+      bottom: 30px;
+    }
+
+    .points-container-2 {
+      text-align: center;
+      padding: 20px;
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+  
+    .points-container-2 h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 200px;
+      margin-top: 4px;
+    }
+  
+    .points-container-2 h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .point {
+      text-align: center;
+      margin-top: -25px;
+      transform: translateX(-50px);
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease; /* Add a transition for smooth animation */
+    }
+
+    .point.animate {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+  
+    .points-container h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .point p {
+      font-size: 16px;
+      margin-bottom: 80px;
+    }
+
+    .book-image-2 {
+     display: none;
+  }
+
+  .book-container-2 img {
+    display: none;
+    
+  }
+
+  .book-picture {
+    display: none;
+  }
+
+  }
+
+
+  /* another section*/
+
+  
+
+  .application-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: -10px;
+  }
+  
+  .thread-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+    transform: translateX(-50%);
+    animation: waveAnimation 3s infinite;
+  }
+  
+  @keyframes waveAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .rectangle-group {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .rectangle img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  
+
+  .rectangle-group p {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .rectangle {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 20px;
+    background-color: black; /* Set background color to black */
+    color: white;
+    position: relative;
+    animation: bounceAnimation 3s infinite;
+  }
+
+  .rectangle:nth-child(1) {
+    background-color: #000;
+    margin-left: 150px;
+    margin-right: -100px;
+  }
+  
+  .rectangle:nth-child(2) {
+    background-color: #000;
+    top: -20px;
+    animation-delay: 0.2s;
+    margin-right: 100px;
+    margin-left: 250px;
+  }
+  
+  .rectangle:nth-child(3) {
+    background-color: #FF6347;
+    bottom: -170px;
+    margin-right: 190px;
+    animation-delay: 0.4s;
+  }
+
+  
+.rectangle:nth-child(4) {
+  background-color: #9370DB;
+  top: 40px;
+  margin-right: 60px;
+  animation-delay: 0.6s;
+}
+
+ 
+  @keyframes bounceAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+   
+  
+  .apply-button {
+    padding: 10px 20px;
+    background-color: #2E8B57;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main-rectangle {
+    width: 600px;
+    height: 300px;
+    background-color: #D8F0E3;
+    border-radius: 20px;
+    animation: growAnimation 2s ease;
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  /* Wave animation along the horizontal axis */
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+  
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+
+  .application-section {
+    height: 1100px;
+    padding: 20px;
+  }
+
+  .rectangle-group {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .rectangle {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px 0;
+    background-color: black;
+    color: white;
+    position: relative;
+    
+    animation: bounceAnimation 3s infinite;
+  }
+
+  .points-container-3 {
+    text-align: center;
+    padding: 20px;
+  margin-top: 40px;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+  }
+
+  .points-container-3 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 200px;
+    margin-top: 4px;
+  }
+
+  .points-container-3 h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .rectangle:nth-child(1) {
+    background-color: #000;
+    margin-left: 60px;
+    margin-right: 0;
+    margin-top: -70px;
+  }
+
+  .rectangle:nth-child(2) {
+    background-color: #000;
+    top: 0;
+    animation-delay: 0.2s;
+    margin-right: 0;
+    margin-left: 60px;
+    margin-top: 70px;
+  }
+
+  .rectangle:nth-child(3) {
+    background-color: #FF6347;
+    bottom: 0;
+    margin-right: 0;
+    margin-left: 60px;
+    animation-delay: 0.4s;
+    margin-top: -40px;
+  }
+
+  .rectangle:nth-child(4) {
+    background-color: #9370DB;
+    top: 0;
+    margin-right: 0;
+    margin-left: 60px;
+    margin-top: 70px;
+    animation-delay: 0.6s;
+  }
+
+  .main-rectangle  {
+    display: none;
+  }
+
+  .rectangle img {
+    display: none;
+  }
+
+  .rectangle-group p{
+    margin-top: 70px;
+  }
+
+  .apply-button {
+    width: 120px;
+    height: 50px;
+  }
+
+  .rectangle-group p {
+    font-size: 19px;
+    font-weight: bold;
+  }
+}
+
+/* form section */
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 50px;
+  background-color: #D8F0E3;
+  position: relative;
+  overflow: hidden;
+  margin-top: -10px;
+}
+
+.donation-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.forms-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Adjust the form width as needed */
+  max-width: 600px; /* Limit the maximum width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Style for form input fields */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input, select {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#moneyFields, #booksFields {
+  display: none;
+}
+
+/* Style for the common fields that appear for both donation types */
+#name,
+#address,
+#email,
+#donationType {
+  display: block;
+}
+
+/* Style for the fields specific to donating money (additional fields) */
+#moneyFields input,
+#moneyFields select {
+  display: block;
+  width: 500px;
+  height: 30px; /* You can adjust the height as needed */
+  margin-bottom: 10px;
+}
+
+/* Style for the fields specific to donating books (additional fields) */
+#booksFields input,
+#booksFields select {
+  display: block;
+  width: auto;
+  height: 30px; /* You can adjust the height as needed */
+  margin-bottom: 10px;
+}
+
+/* Style for the "Submit" button */
+button[type="submit"] {
+  background-color: #2E8B57;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Show appropriate fields when the donation type is selected */
+#donationType {
+  margin-bottom: 20px;
+}
+
+#donationType option {
+  display: block;
+}
+
+#donationType option[value="money"]:checked ~ #moneyFields,
+#donationType option[value="books"]:checked ~ #booksFields {
+  display: block;
+}
+
+/* Your existing CSS styles */
+
+/* Add the following media query for mobile responsiveness */
+
+/* Your existing CSS styles */
+
+/* Add the following media query for mobile responsiveness */
+
+@media (max-width: 767px) {
+  .forms-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Adjust the form width to fit the screen */
+    padding: 20px; /* Increase the padding for better spacing on mobile */
+  
+  }
+
+  form {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  /* Additional CSS styles for the common form fields */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+ 
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Additional CSS styles for the buttons */
+
+  button {
+    flex: 1;
+    padding: 10px;
+    background-color: #2E8B57;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+ /* ... Other CSS rules ... */
+
+ #moneyFields input,
+ #moneyFields select {
+   width: 100%;
+   height: 30px;
+   margin-bottom: 10px;
+ }
+
+ /* Additional CSS styles for the fields specific to donating books (additional fields) */
+ #booksFields input,
+ #booksFields select {
+   width: 100%;
+   height: 30px;
+   margin-bottom: 10px;
+ }
+
+/* Show the selected fields based on the donation type */
+#donationType {
+  width: 100%;
+  padding: 10px;
+}
+
+#donationType option[value="money"]:checked ~ #moneyFields {
+  display: block;
+}
+
+/* Adjust the styling of the "Donate Money" section for mobile */
+#moneyFields label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#moneyFields input,
+#moneyFields select,
+#moneyFields textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ /* Fix the issue with the label text in Currency Selection and Donation Frequency */
+ #moneyFields label[for="currency"],
+ #moneyFields label[for="donationFrequency"] {
+   display: inline-block; /* Set the label to be inline-block */
+   width: auto; /* Allow the label to take only the necessary width */
+   margin-right: 10px; /* Add a little spacing between the label and input */
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer section */
+footer {
+  background-color: #2E8B57;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+/* Additional styles for mobile responsiveness */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    margin-top: 20px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
